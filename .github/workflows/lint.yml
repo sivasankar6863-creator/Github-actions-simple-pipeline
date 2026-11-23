@@ -1,0 +1,19 @@
+name: Linter
+
+on:
+  push:
+    paths: "*.py"
+
+jobs:
+  Code-Linting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone the code
+        uses: actions/checkout@v4
+
+      - name: install the lint
+        run: pip install ruff
+
+      - name: check the files for linting
+        run: ruff check .
+      

@@ -4,7 +4,7 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 
 # Basic route
-@app.route("/"))
+@app.route("/")
 def home():
     return "<h1>Hello, Flask!</h1>"
 
